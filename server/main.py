@@ -11,7 +11,7 @@ socket_io = SocketIO(app, cors_allowed_origins="*")
 
 a = AskChat()
 
-database = "C:/Users/Alex/OneDrive/Documente/PersonalRepos/AI/LangChain/AzureCognitiveSearch/barack_obama-database"
+database = "C:/Users/Alex/OneDrive/Documente/PersonalRepos/AI/LangChain/AzureCognitiveSearch/personal-database"
 
 @socket_io.on('connect')
 def handle_connect():

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ButtonCustom = ({ textName, eventFunction, classStyle }) => {
+const ButtonCustom = ({ textName, eventFunction, classStyle, typeButton }) => {
   return (
-    <button className={classStyle} onClick={eventFunction}>{ textName }</button>
+    <button type={typeButton} className={classStyle}>{ textName }</button>
   )
 }
 

@@ -15,8 +15,7 @@ const socket = io("ws://localhost:50000");
 
 const Chat = () => {
   const [inputValue, setInputValue] = useState("");
-  const [serverMessage, setServerMessage] = useState({
-  });
+  const [serverMessage, setServerMessage] = useState({});
   const [chatMessages, setChatMessages] = useState([]);
 
   const handleChangeInput = (e) => {
@@ -29,8 +28,9 @@ const Chat = () => {
     // setChatMessages( prevMessages => [...prevMessages, chatMessage])
   });
 
-  const sendToServer = () => {
+  const sendToServer = (e) => {
     try {
+      e.preventDefault();
       let clientMessage = {
         role: "client",
         message: inputValue,
@@ -46,9 +46,8 @@ const Chat = () => {
 
   useEffect(() => {
     try {
-
-      if(serverMessage.role === undefined){
-        return
+      if (serverMessage.role === undefined) {
+        return;
       }
       setChatMessages((prevMessages) => [...prevMessages, serverMessage]);
     } catch (error) {
@@ -73,7 +72,8 @@ const Chat = () => {
           </div>
         ))}
       </div>
-      <div className="input_container">
+
+      <form onSubmit={sendToServer} className="input_container">
         <Input
           type="text"
           value={inputValue}
@@ -85,8 +85,9 @@ const Chat = () => {
           classStyle="button"
           textName="Send"
           eventFunction={sendToServer}
+          typeButton="submit"
         />
-      </div>
+      </form>
     </div>
   );
 };
