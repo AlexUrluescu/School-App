@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 //styles
 import "../style/ChatPage.css";
@@ -15,30 +15,64 @@ const socket = io("ws://localhost:50000");
 
 const Chat = () => {
   const [inputValue, setInputValue] = useState("");
+  const [serverMessage, setServerMessage] = useState({
+  });
+  const [chatMessages, setChatMessages] = useState([]);
 
   const handleChangeInput = (e) => {
     setInputValue(e.target.value);
   };
 
-  const [serverMessage, setServerMessage] = useState(null);
-
-  socket.on("from-server", (msg) => {
-    setServerMessage(msg);
-    console.log(msg);
+  socket.on("from-server", (chatMessage) => {
+    setServerMessage(chatMessage);
+    console.log(chatMessage);
+    // setChatMessages( prevMessages => [...prevMessages, chatMessage])
   });
 
   const sendToServer = () => {
     try {
-      socket.emit("to-server", inputValue);
+      let clientMessage = {
+        role: "client",
+        message: inputValue,
+      };
+      socket.emit("to-server", clientMessage);
+
+      setChatMessages((prevMessages) => [...prevMessages, clientMessage]);
       setInputValue("");
     } catch (error) {
       console.log(error);
     }
   };
 
+  useEffect(() => {
+    try {
+
+      if(serverMessage.role === undefined){
+        return
+      }
+      setChatMessages((prevMessages) => [...prevMessages, serverMessage]);
+    } catch (error) {
+      console.log(error);
+    }
+  }, [serverMessage]);
+
   return (
     <div className="chat_container">
-      <div className="chat">{serverMessage}</div>
+      <div className="chat">
+        {chatMessages.map((message, index) => (
+          <div key={index}>
+            {message.role === "chat" ? (
+              <div className="chat_messages_container">
+                <div className="chat_messages">{message.message}</div>
+              </div>
+            ) : (
+              <div className="user_messages_container">
+                <div className="user_messages">{message.message}</div>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
       <div className="input_container">
         <Input
           type="text"

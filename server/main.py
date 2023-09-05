@@ -11,7 +11,7 @@ socket_io = SocketIO(app, cors_allowed_origins="*")
 
 a = AskChat()
 
-database = "C:/Users/Alex/OneDrive/Documente/PersonalRepos/AI/LangChain/AzureCognitiveSearch/personal-database"
+database = "C:/Users/Alex/OneDrive/Documente/PersonalRepos/AI/LangChain/AzureCognitiveSearch/barack_obama-database"
 
 @socket_io.on('connect')
 def handle_connect():
@@ -19,12 +19,17 @@ def handle_connect():
 
 @socket_io.on('to-server')
 def handle_to_server(query):
-    print(f'new to-server event: {query}')
+    # print(f'new to-server event: {query}')
+    print(query)
+    print(query['message'])
 
-    answer = a.answering(database, query)
+    answer = a.answering(database, query['message'])
 
+    chatMessage = {"role": "chat", "message": answer}
+
+    print(chatMessage)
     # print(answer)
-    socket_io.emit('from-server', f"primit mesajul: {answer}")
+    socket_io.emit('from-server', chatMessage)
 
 if __name__ == '__main__':
-    socket_io.run(app, port=50000)
+    socket_io.run(app, port=50000, debug = True)
