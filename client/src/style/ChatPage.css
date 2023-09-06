@@ -1,0 +1,66 @@
+.chat_container{
+    background-color: gainsboro;
+    height: 70vh;
+    width: 70vw;
+    margin: 20px auto;
+    border: 2px solid black;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.chat{
+    background-color: gainsboro;
+    height: 85%;
+    overflow: auto; /* This property adds a scrollbar when content overflows */
+}
+
+.input_container{
+    background-color: green;
+    height: 15%;
+
+    display: flex;
+}
+
+.input{
+    border: none;
+    outline: none;
+    width: 90%;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.button{
+    background-color: rgb(187, 187, 255);
+    width: 10%;
+    border: none;
+    cursor: pointer;
+}
+
+.user_messages_container{
+    /* background-color: aquamarine; */
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chat_messages_container{
+    /* background-color: blueviolet; */
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+.user_messages{
+    background-color: rgb(247, 169, 169);
+    width: 50%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.chat_messages{
+    background-color: rgb(180, 241, 180);
+    width: 50%;
+    padding: 10px;
+    margin: 10px;
+}
