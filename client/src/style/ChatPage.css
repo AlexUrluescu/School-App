@@ -12,6 +12,7 @@
 .chat{
     background-color: gainsboro;
     height: 85%;
+    overflow: auto; /* This property adds a scrollbar when content overflows */
 }
 
 .input_container{
