@@ -1,5 +1,13 @@
+*{
+  margin: 0;
+}
+
 .App {
   text-align: center;
+  background-color: aliceblue;
+  margin: 0;
+  padding-top: 20px;
+  height: 100vh;
 }
 
 .App-logo {

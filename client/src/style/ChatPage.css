@@ -1,40 +1,66 @@
 .chat_container{
-    background-color: gainsboro;
-    height: 70vh;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.57);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+    -webkit-backdrop-filter: blur(6.6px);
+    padding: 15px;
+    height: 80vh;
     width: 70vw;
     margin: 20px auto;
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    border-radius: 30px;
 
     display: flex;
     flex-direction: column;
 }
 
 .chat{
-    background-color: gainsboro;
-    height: 85%;
+    /* background-color: gainsboro; */
+    height: 87%;
     overflow: auto; /* This property adds a scrollbar when content overflows */
 }
 
 .input_container{
-    background-color: green;
-    height: 15%;
+    /* background-color: green; */
+    margin-top: 20px;
+    padding: 10px;
+    height: 13%;
 
     display: flex;
 }
 
+
 .input{
+    height: 60px;
     border: none;
     outline: none;
-    width: 90%;
+    width: 85%;
     font-size: 25px;
-    padding: 10px;
+    padding: 10px 30px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: rgb(238, 238, 238);
 }
 
 .button{
-    background-color: rgb(187, 187, 255);
-    width: 10%;
+    /* background-color: rgb(151, 129, 31); */
+    width: 15%;
     border: none;
     cursor: pointer;
+    height: 80px;
+    padding: 0 20px;
+
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+    transition: all ease .4s;
+}
+
+.button:hover{
+    font-size: 40px;
+    /* transform: scale(2); */
 }
 
 .user_messages_container{
@@ -52,15 +78,32 @@
 }
 
 .user_messages{
-    background-color: rgb(247, 169, 169);
+    background-color: rgb(247, 178, 51);
     width: 50%;
     padding: 10px;
     margin: 10px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 15px;
+    text-align: start;
+
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 20px;
 }
 
 .chat_messages{
-    background-color: rgb(180, 241, 180);
+    background-color: rgb(112, 255, 112);
     width: 50%;
     padding: 10px;
     margin: 10px;
+
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 15px;
+    text-align: start;
+
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 20px;
 }
