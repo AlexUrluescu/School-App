@@ -1,8 +1,10 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const ButtonCustom = ({ textName, eventFunction, classStyle, typeButton }) => {
   return (
-    <button type={typeButton} className={classStyle}>{ textName }</button>
+    <button type={typeButton} className={classStyle}><FontAwesomeIcon icon={faPaperPlane} /></button>
   )
 }
 
