@@ -7,7 +7,7 @@ const ChatPage = () => {
   return (
     <div>
       <div>
-        <h1>ChatBot</h1>
+        <h1>ContiChat</h1>
       </div>
       <Chat />
     </div>

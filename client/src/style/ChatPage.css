@@ -1,9 +1,11 @@
 .chat_container{
-    background-color: gainsboro;
-    height: 70vh;
+    background-color: rgb(214, 214, 214);
+    padding: 15px;
+    height: 80vh;
     width: 70vw;
     margin: 20px auto;
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    border-radius: 30px;
 
     display: flex;
     flex-direction: column;
@@ -16,7 +18,9 @@
 }
 
 .input_container{
-    background-color: green;
+    /* background-color: green; */
+    margin-top: 20px;
+    padding: 10px;
     height: 15%;
 
     display: flex;
@@ -27,7 +31,9 @@
     outline: none;
     width: 90%;
     font-size: 25px;
-    padding: 10px;
+    padding: 10px 30px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
 }
 
 .button{
@@ -35,6 +41,9 @@
     width: 10%;
     border: none;
     cursor: pointer;
+
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .user_messages_container{
@@ -56,6 +65,10 @@
     width: 50%;
     padding: 10px;
     margin: 10px;
+
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 20px;
 }
 
 .chat_messages{

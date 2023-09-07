@@ -12,9 +12,9 @@ const App = () => {
   return (
     <div className="App">
       <div className="App">
-        <NavBar />
+        {/* <NavBar /> */}
         <ChatPage />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );
