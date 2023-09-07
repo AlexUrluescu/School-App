@@ -4,7 +4,7 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const ButtonCustom = ({ textName, eventFunction, classStyle, typeButton }) => {
   return (
-    <button type={typeButton} className={classStyle}><FontAwesomeIcon icon={faPaperPlane} /></button>
+    <button type={typeButton} className={classStyle}><FontAwesomeIcon style={{fontSize: "30px"}} icon={faPaperPlane} /></button>
   )
 }
 

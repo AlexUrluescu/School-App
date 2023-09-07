@@ -18,7 +18,7 @@
 
 .chat{
     /* background-color: gainsboro; */
-    height: 85%;
+    height: 87%;
     overflow: auto; /* This property adds a scrollbar when content overflows */
 }
 
@@ -26,7 +26,7 @@
     /* background-color: green; */
     margin-top: 20px;
     padding: 10px;
-    height: 15%;
+    height: 13%;
 
     display: flex;
 }
@@ -36,7 +36,7 @@
     height: 60px;
     border: none;
     outline: none;
-    width: 90%;
+    width: 85%;
     font-size: 25px;
     padding: 10px 30px;
     border-top-left-radius: 50px;
@@ -45,14 +45,22 @@
 }
 
 .button{
-    background-color: rgb(187, 187, 255);
-    width: 10%;
+    /* background-color: rgb(151, 129, 31); */
+    width: 15%;
     border: none;
     cursor: pointer;
     height: 80px;
+    padding: 0 20px;
 
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
+
+    transition: all ease .4s;
+}
+
+.button:hover{
+    font-size: 40px;
+    /* transform: scale(2); */
 }
 
 .user_messages_container{
