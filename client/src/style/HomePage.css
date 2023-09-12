@@ -1,0 +1,120 @@
+
+.circleContainerStyle{
+    background-color: pink;
+    padding: 20px 70px;
+}
+
+.circleContainer{
+    background-color: red;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle{
+    background-color: green;
+    width: 400px;
+    height: 400px;
+
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+
+    transition: all ease .4s;
+
+}
+
+.circle1{
+    background-color: transparent;
+
+    color: transparent;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 80px;
+    left: 30px;
+
+    transition: ease .4s;
+}
+
+.circle2{
+    background-color: transparent;
+
+    color: transparent;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 80px;
+    right: 30px;
+
+    transition: ease .4s;
+}
+
+.circle3{
+    background-color: transparent;
+
+    color: transparent;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    position: absolute;
+    bottom: 80px;
+    right: 30px;
+
+    transition: ease .4s;
+}
+
+.circle4{
+    background-color: transparent;
+
+    color: transparent;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    position: absolute;
+    bottom: 80px;
+    left: 30px;
+
+    transition: ease .4s;
+}
+
+
+.circleContainerStyle:hover .circle1{
+    background-color: rgb(12, 179, 190);
+    color: black;
+
+    left: -130px;
+}
+
+
+.circleContainerStyle:hover .circle2{
+    background-color: rgb(12, 179, 190);
+    color: black;
+
+    right: -130px;
+}
+
+.circleContainerStyle:hover .circle3{
+    background-color: rgb(12, 179, 190);
+    color: black;
+
+    right: -130px;
+}
+
+.circleContainerStyle:hover .circle4{
+    background-color: rgb(12, 179, 190);
+    color: black;
+
+    left: -130px;
+}
