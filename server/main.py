@@ -13,7 +13,7 @@ a = AskChat()
 
 # database = "C:/Users/Alex/OneDrive/Documente/PersonalRepos/AI/LangChain/AzureCognitiveSearch/personal-database"
 
-db_conti = "C:/Users/uif94707/Documents/myProjects/School-App/School-App/server/personal-database"
+db_conti = "C:/Users/uif94707/Documents/myProjects/School-App/School-App/server/conti-database"
 
 @socket_io.on('connect')
 def handle_connect():
