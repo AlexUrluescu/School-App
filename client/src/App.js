@@ -1,6 +1,7 @@
-// import { useEffect } from 'react';
+// Impport style ---------------------
 import "./App.css";
 
+// Import react router dom ------------------------------------------
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // PAGES ----------------------------------
