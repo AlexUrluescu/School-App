@@ -9,7 +9,7 @@
  const NavBar = () => {
    return (
      <div className='navbar'>
-      {/* <Link to="/">Home</Link> */}
+      <Link className='login' to="/">Home</Link>
       <Link className='login' to="/login"><h3>Login</h3></Link>
       {/* <Link to="/contiChat">contiChat</Link> */}
      </div>
