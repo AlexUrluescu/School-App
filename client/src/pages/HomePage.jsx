@@ -1,11 +1,15 @@
 import React from "react";
 
+// styles -----------------------------------
 import "../style/HomePage.css";
 
+// image -------------------------------------
 import image from "../static/planet.png"
 
 // Components -------------------------------
 import NavBar from "../components/NavBar";
+
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -17,10 +21,10 @@ const HomePage = () => {
           <div className="circle">
             <img className="planet_foto" src={image} alt="planet" />
 
-            <div className="circle1">1st year</div>
-            <div className="circle2">2nd year</div>
-            <div className="circle3">3rd yeard</div>
-            <div className="circle4">4th year</div>
+            <Link className="circle1" to="/firstyear">1st year</Link>
+            <Link className="circle2" to="/secondyear">2st year</Link>
+            <Link className="circle3" to="/thirdyear">3st year</Link>
+            <Link className="circle4" to="/fourthyear">4st year</Link>
           </div>
         </div>
       </div>
