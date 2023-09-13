@@ -10,7 +10,7 @@ import NavBar from "../components/NavBar";
 const HomePage = () => {
   return (
     <div>
-      {/* <NavBar /> */}
+      <NavBar />
       <div className="title"><h1>Welcome in Terra</h1></div>
       <div className="circleContainer">
         <div className="circleContainerStyle">
