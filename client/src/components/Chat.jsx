@@ -8,7 +8,7 @@ import "../style/ChatPage.css";
 import Input from "./Input";
 import ButtonCustom from "./ButtonCustom";
 
-// import { useState } from "react";
+// Import socket-io-client ---------------------
 import { io } from "socket.io-client";
 
 const socket = io("ws://localhost:50000");
@@ -18,16 +18,21 @@ const Chat = () => {
   const [serverMessage, setServerMessage] = useState({});
   const [chatMessages, setChatMessages] = useState([]);
 
+  // control the input value ----------------------------------------
   const handleChangeInput = (e) => {
     setInputValue(e.target.value);
   };
 
+
+  // the socket is on for server's messages --------------------------
   socket.on("from-server", (chatMessage) => {
     setServerMessage(chatMessage);
     console.log(chatMessage);
     // setChatMessages( prevMessages => [...prevMessages, chatMessage])
   });
 
+
+  // send the query to the server -----------------------------------------
   const sendToServer = (e) => {
     try {
       e.preventDefault();
@@ -44,6 +49,7 @@ const Chat = () => {
     }
   };
 
+
   useEffect(() => {
     try {
       if (serverMessage.role === undefined) {
@@ -54,6 +60,7 @@ const Chat = () => {
       console.log(error);
     }
   }, [serverMessage]);
+
 
   return (
     <div className="chat_container">
@@ -83,7 +90,6 @@ const Chat = () => {
         />
         <ButtonCustom
           classStyle="button"
-          textName="Send"
           eventFunction={sendToServer}
           typeButton="submit"
         />

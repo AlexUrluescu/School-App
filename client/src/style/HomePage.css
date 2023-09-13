@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    /* background-color: bisque; */
+    font-size: 35px;
+    margin-top: 30px;
+
+}
+
+.title h1{
+    /* box-shadow: 0 8px 8px -4px lightblue; */
+    text-shadow: 0 6px 8px rgb(185, 185, 185);
+}
+
+.circleContainer{
+    /* background-color: red; */
+    margin-top: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.circleContainerStyle{
+    /* background-color: pink; */
+    padding: 20px 70px;
+}
+
+
+.circle{
+    /* background-color: green; */
+    width: 400px;
+    height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+
+    transition: all ease .4s;
+
+
+}
+
+.circle1{
+    background-color: transparent;
+
+    color: transparent;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 80px;
+    left: 30px;
+
+    transition: ease .4s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.circle2{
+    background-color: transparent;
+
+    color: transparent;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 80px;
+    right: 30px;
+
+    transition: ease .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.circle3{
+    background-color: transparent;
+
+    color: transparent;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    position: absolute;
+    bottom: 80px;
+    right: 30px;
+
+    transition: ease .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.circle4{
+    background-color: transparent;
+
+    color: transparent;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    position: absolute;
+    bottom: 80px;
+    left: 30px;
+
+    transition: ease .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+
+
+.circleContainerStyle:hover .circle1{
+    background-color: rgb(12, 179, 190);
+
+    color: white;
+
+    left: -130px;
+}
+
+
+
+.circleContainerStyle:hover .circle2{
+    background-color: rgb(12, 179, 190);
+    color: white;
+
+
+    right: -130px;
+}
+
+.circleContainerStyle:hover .circle3{
+    background-color: rgb(12, 179, 190);
+    color: white;
+
+
+    right: -130px;
+}
+
+.circleContainerStyle:hover .circle4{
+    background-color: rgb(12, 179, 190);
+    color: white;
+
+
+    left: -130px;
+}
+
+.planet_foto{
+    width: 100%;
+    height: 100%;
+
+    transition: all ease .4s;
+}
+
+.circleContainerStyle:hover .planet_foto{
+    transform: scale(1.1);
+}
