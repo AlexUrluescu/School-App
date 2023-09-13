@@ -1,6 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
+// Import fontAwesomeIcon -------------------------------------------
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+
 //styles
 import "../style/ChatPage.css";
 
@@ -92,6 +96,7 @@ const Chat = () => {
           classStyle="button"
           eventFunction={sendToServer}
           typeButton="submit"
+          textContent={<FontAwesomeIcon style={{fontSize: "30px"}} icon={faPaperPlane}/>}
         />
       </form>
     </div>

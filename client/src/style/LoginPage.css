@@ -1,0 +1,95 @@
+
+.form_container{
+    /* background-color: red; */
+    padding: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_subcontainer{
+    background: rgba(255, 255, 255, 0.57);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+    -webkit-backdrop-filter: blur(6.6px);
+    width: 500px;
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 25px;
+    border: 2px solid gainsboro;
+}
+
+.form_subcontainer h2{
+    font-size: 35px;
+}
+
+.input_form{
+    border: 2px solid gainsboro;
+    width: 300px;
+    padding: 10px;
+    outline: none;
+    border-radius: 15px;
+    height: 45px;
+}
+
+.form_login{
+    /* background-color: orange; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 50px;
+}
+
+.login_btn{
+    margin-top: 40px;
+    width: 100px;
+    height: 40px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+
+    border: 2px solid black;
+    padding: 5px 15px;
+    border-radius: 15px;
+    background-color: black;
+
+    transition: all ease .5s;
+    
+}
+
+.login h3{
+    font-weight: 400;
+}
+
+.loginOptions_container{
+    border-top: 2px solid gainsboro;
+    margin-top: 50px;
+    padding: 10px;
+
+}
+
+.loginOptions_subcontainer{
+    /* background-color: pink; */
+    padding: 20px;
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.login_option{
+    /* background-color: yellow; */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.imageOption{
+    width: 100%;
+}
