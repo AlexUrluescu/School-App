@@ -5,13 +5,13 @@ import Chat from "../components/Chat";
 import NavBar from "../components/NavBar";
 
 
-const ChatPage = () => {
+const ChatPage = ({title}) => {
 
   return (
     <div>
       <NavBar />
       <div>
-        <h1>ContiChat</h1>
+        <h1>{title}</h1>
       </div>
       <Chat />
     </div>

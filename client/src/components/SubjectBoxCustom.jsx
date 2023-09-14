@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const SubjectBoxCustom = ({styleClass, textContent}) => {
+const SubjectBoxCustom = ({ styleClass, textContent, link }) => {
   return (
-    <div className={styleClass}>{textContent}</div>
+    <Link to={link} className={styleClass}>{textContent}</Link>
   )
 }
 

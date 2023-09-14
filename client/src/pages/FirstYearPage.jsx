@@ -13,10 +13,10 @@ const FirstYearPage = () => {
     <div>
       <NavBar />
       <div className='subjects_container'>
-        <SubjectBoxCustom styleClass = "subjectBox" textContent = "Matematici Speciale"/>
-        <SubjectBoxCustom styleClass = "subjectBox" textContent = "Programare"/>
-        <SubjectBoxCustom styleClass = "subjectBox" textContent = "Fizica"/>
-        <SubjectBoxCustom styleClass = "subjectBox" textContent = "Tehnici de Comunicare"/>
+        <SubjectBoxCustom styleClass = "subjectBox" textContent = "Matematici Speciale" link="/firstyear/matematicispeciale" />
+        <SubjectBoxCustom styleClass = "subjectBox" textContent = "Programare" link="/firstyear/programare" />
+        <SubjectBoxCustom styleClass = "subjectBox" textContent = "Fizica" link="/firstyear/fizica"/>
+        <SubjectBoxCustom styleClass = "subjectBox" textContent = "Tehnici de Comunicare" link="/firstyear/comunicare"/>
       </div>
     </div>
   )

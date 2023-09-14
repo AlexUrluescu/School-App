@@ -22,6 +22,10 @@ const App = () => {
           <Route path="/contiChat" element={<ChatPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/firstyear" element={<FirstYearPage />} />
+          <Route path="/firstyear/matematicispeciale" element={<ChatPage title="Matematici Speciale"/>} />
+          <Route path="/firstyear/programare" element={<ChatPage title="Programare"/>} />
+          <Route path="/firstyear/fizica" element={<ChatPage title="Fizica"/>} />
+          <Route path="/firstyear/comunicare" element={<ChatPage title="Tehnici de Comunicare"/>} />
           <Route path="/secondyear" element={<SecondYearPage />} />
           <Route path="/thirdyear" element={<ThirdYearPage />} />
           <Route path="/fourthyear" element={<FourthYearPage />} />
